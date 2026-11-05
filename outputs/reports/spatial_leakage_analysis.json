@@ -1,0 +1,8 @@
+{
+    "Random_CV_ROC_AUC_Mean": 0.8197240732455331,
+    "Random_CV_ROC_AUC_Std": 0.019274924725436213,
+    "Spatial_CV_ROC_AUC_Mean": 0.6694370857567192,
+    "Spatial_CV_ROC_AUC_Std": 0.10650221430811264,
+    "Overoptimism_Delta_AUC": 0.15028698748881386,
+    "Spatial_CV_Recall_Mean": 0.511485826001955
+}
