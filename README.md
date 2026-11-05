@@ -4,14 +4,16 @@
 **Module:** ST7072CEM / STW7072CEM Machine Learning (March Intake 2026)  
 **Institution:** Softwarica College of IT & E-Commerce in collaboration with Coventry University  
 **Student Name:** Dhan Bahadur Gurung  
-**Coventry ID:** 17624480  
+**Coventry ID:** 17624480
 
 ---
 
 ## 1. Project Overview & Problem Significance
+
 The **Arniko Highway (NH03)** is a strategic 114 km mountain road corridor connecting Kathmandu Valley (Dhulikhel) with the northern border at Kodari/Tatopani. The corridor traverses through Sindhupalchok district along the steep valleys of the Sun Koshi and Bhote Koshi rivers, experiencing recurrent monsoon slope failures, debris flows, and severe seismic reactivation (e.g., 2014 Jure landslide, 2015 Gorkha earthquake).
 
 ### Key Methodological Innovations:
+
 1. **Real-World Non-Toy Dataset:** Integrates real ground-truth landslide mapping from the **British Geological Survey (BGS) / NERC Arniko Highway Inventory (481 real mapped landslides, Grant NE/L002582/1)** and **NASA Global Landslide Catalog (GLC)** for Nepal, coupled with real **SRTM 30m Global DEM** elevations, monsoon precipitation gradients, lithology, and active fault proximity.
 2. **Three Supervised Classifiers:** Implements and compares:
    - **Logistic Regression (LR):** Interpretable linear baseline with balanced class weights.
@@ -24,6 +26,7 @@ The **Arniko Highway (NH03)** is a strategic 114 km mountain road corridor conne
 ---
 
 ## 2. Project Directory Structure
+
 ```
 college/
 ├── .venv/                                      # Python virtual environment
@@ -73,6 +76,7 @@ college/
 ## 3. Environment Setup & Installation
 
 ### Option A: Using Local Virtual Environment (Windows Shell)
+
 1. **Clone or Extract the Project Directory:**
    ```powershell
    cd c:\Users\Administrator\Documents\college
@@ -92,13 +96,17 @@ college/
 ## 4. Execution Instructions
 
 ### A. Run Interactive Streamlit Web Dashboard
+
 To launch the interactive geospatial decision-support application in your web browser:
+
 ```powershell
 streamlit run app.py
 ```
-*(Or using the virtual environment directly: `.\.venv\Scripts\streamlit.exe run app.py`)*
+
+_(Or using the virtual environment directly: `.\.venv\Scripts\streamlit.exe run app.py`)_
 
 The dashboard provides:
+
 1. **🗺️ Geospatial Corridor Map:** Color-coded 114 km route risk markers with real BGS ground-truth landslide overlay.
 2. **🔮 Live Hazard Simulator:** Interactive what-if tool with sliders (slope angle, rainfall, lithology, fault proximity) generating instant ML predictions and engineering advisories.
 3. **📈 Route Elevation & Hazard Profile:** Continuous dual-axis chainage profile highlighting critical choke points (Dolalghat, Jure landslide, Barhabise, Kodari border).
@@ -106,11 +114,15 @@ The dashboard provides:
 5. **📁 Landslide Inventory & Data:** Searchable raw/processed dataset tables with CSV export and feature distributions.
 
 ### B. Run Automated Pipeline (Generates All Figures & Metrics)
+
 To execute the end-to-end machine learning pipeline from the terminal:
+
 ```powershell
 python tests\run_pipeline.py
 ```
+
 This script automatically executes:
+
 - Data synthesis and quality auditing (missing value checks, class balance).
 - Spatial holdout splitting (Sectors 1 & 2 for training; Sector 3 for test).
 - Training and evaluation of Logistic Regression, Random Forest, and XGBoost.
@@ -119,13 +131,17 @@ This script automatically executes:
 - Full 114 km route susceptibility profile and 2D spatial map rendering.
 
 ### B. Run Interactive Jupyter Notebook
+
 Launch the Jupyter Notebook server:
+
 ```powershell
 jupyter notebook notebooks\Arniko_Highway_Landslide_Susceptibility.ipynb
 ```
+
 Select the `.venv` Python kernel. You can step through each code cell or choose **Cell -> Run All**. Every code block is followed by analytical explanations adhering to university marking standards.
 
 ### C. Run on Google Colab
+
 1. Upload the `Arniko_Highway_Landslide_Susceptibility.ipynb` file to Google Drive.
 2. Open with Google Colab.
 3. Install required packages in the first cell if needed:
@@ -139,35 +155,39 @@ Select the `.venv` Python kernel. You can step through each code cell or choose 
 ## 5. Experimental Summary & Key Findings
 
 ### 1. Model Evaluation on Spatially Held-Out Corridor (Sector 3: Barhabise to Kodari)
-*Targeting the most rugged, high-relief section (411 road units, 124 real landslide-affected points):*
 
-| Classifier | ROC-AUC | 95% Bootstrap CI | Recall (Sensitivity) | 95% Bootstrap CI | Precision | F1-Score | False Negatives |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Logistic Regression** | 0.525 | [0.466, 0.582] | **99.2%** | [0.975, 1.000] | 0.304 | 0.466 | **1** |
-| **Random Forest** | 0.527 | [0.463, 0.587] | 94.4% | [0.901, 0.978] | 0.310 | 0.466 | 7 |
-| **XGBoost** | **0.528** | [0.463, 0.590] | 94.4% | [0.898, 0.980] | **0.310** | **0.467** | 7 |
+_Targeting the most rugged, high-relief section (411 road units, 124 real landslide-affected points):_
 
-*Note on Safety Optimization:* Class-weighted Logistic Regression achieved **99.2% Recall** with only **1 single False Negative** across the entire 411 held-out road units, proving exceptionally dependable for life-safety hazard mitigation.
+| Classifier              |  ROC-AUC  | 95% Bootstrap CI | Recall (Sensitivity) | 95% Bootstrap CI | Precision | F1-Score  | False Negatives |
+| :---------------------- | :-------: | :--------------: | :------------------: | :--------------: | :-------: | :-------: | :-------------: |
+| **Logistic Regression** |   0.525   |  [0.466, 0.582]  |      **99.2%**       |  [0.975, 1.000]  |   0.304   |   0.466   |      **1**      |
+| **Random Forest**       |   0.527   |  [0.463, 0.587]  |        94.4%         |  [0.901, 0.978]  |   0.310   |   0.466   |        7        |
+| **XGBoost**             | **0.528** |  [0.463, 0.590]  |        94.4%         |  [0.898, 0.980]  | **0.310** | **0.467** |        7        |
+
+_Note on Safety Optimization:_ Class-weighted Logistic Regression achieved **99.2% Recall** with only **1 single False Negative** across the entire 411 held-out road units, proving exceptionally dependable for life-safety hazard mitigation.
 
 ### 2. Empirical Demonstration of Spatial Autocorrelation Leakage
+
 - **Naive Random 3-Fold Cross-Validation:** ROC-AUC = **0.820 ± 0.019** (artificially inflated due to spatial autocorrelation between adjacent road points).
 - **Spatial Sector Block Cross-Validation:** ROC-AUC = **0.669 ± 0.107** (realistic generalization to unseen mountain sectors).
 - **Leakage Delta:** **+0.150 AUC points over-optimism** when using conventional random train-test splitting.
 
 ### 3. Highway Corridor Risk Distribution by Administrative Sector
 
-| Highway Sector | Low (<0.33) | Moderate (0.33–0.66) | High (>0.66) |
-| :--- | :---: | :---: | :---: |
-| **Sector 1 (Dhulikhel to Dolalghat, km 0–35)** | **89.4%** | 6.5% | 4.1% |
-| **Sector 2 (Dolalghat to Barhabise, km 35–75)** | **50.7%** | 31.9% | 17.4% |
-| **Sector 3 (Barhabise to Kodari, km 75–114)** | 14.6% | **33.6%** | **51.8%** |
+| Highway Sector                                  | Low (<0.33) | Moderate (0.33–0.66) | High (>0.66) |
+| :---------------------------------------------- | :---------: | :------------------: | :----------: |
+| **Sector 1 (Dhulikhel to Dolalghat, km 0–35)**  |  **89.4%**  |         6.5%         |     4.1%     |
+| **Sector 2 (Dolalghat to Barhabise, km 35–75)** |  **50.7%**  |        31.9%         |    17.4%     |
+| **Sector 3 (Barhabise to Kodari, km 75–114)**   |    14.6%    |      **33.6%**       |  **51.8%**   |
 
 High-risk zones are concentrated in the steep gorge of **Sector 3** (51.8% High Risk, 85.4% High/Moderate combined), closely matching the historical damage footprint of the 2014 Jure disaster and 2015 Gorkha earthquake.
 
 ---
 
 ## 6. Screencast / Video Recording Instructions
+
 As required by the assignment brief:
+
 1. Open the terminal and launch `python tests\run_pipeline.py` or step through `notebooks\Arniko_Highway_Landslide_Susceptibility.ipynb`.
 2. Use OBS Studio, Windows Xbox Game Bar (`Win + Alt + R`), or Loom to record a 2–3 minute video demonstrating:
    - Successful execution of all code cells.

@@ -24,3 +24,11 @@ scratch/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Word temp files and lock files
+~$*
+*_updated.docx
+
+# Agent / AI internal caches
+.agents/
+.claude/
