@@ -97,7 +97,9 @@ college/
 
 ### A. Run Interactive Streamlit Web Dashboard
 
-To launch the interactive geospatial decision-support application in your web browser:
+**🌐 Live Public Web App:** [https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/](https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/)
+
+To launch the application locally in your web browser:
 
 ```powershell
 streamlit run app.py

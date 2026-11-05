@@ -937,9 +937,11 @@ def build_docx():
     # =========================================================================
     add_h1("APPENDICES")
     
-    add_h2("Appendix A: Screencast Video Recording Link & Demonstration Timestamp Guide")
+    add_h2("Appendix A: Live Deployed Dashboard & Demonstration Guide")
     add_body(
-        "As required by the assignment brief, a comprehensive screencast demonstrating the live execution of the pipeline, interactive notebook, and Streamlit dashboard has been recorded and submitted:\n"
+        "As required by the assignment brief and coursework evidence standards, both a live public Web GIS decision-support application and an auditable screencast demonstration have been deployed and submitted:\n"
+        "• Live Interactive Web Application (Streamlit Cloud): https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/\n"
+        "• GitHub Source Code Repository: https://github.com/dhanbg/arniko-highway-landslide-ml\n"
         "• Streaming Video URL (Google Drive): https://drive.google.com/drive/folders/dhan_bahadur_gurung_17624480_screencast\n"
         "• Local Submission Path: submission/DhanBahadurGurung_17624480_Screencast.mp4\n\n"
         "Demonstration Timestamp Breakdown (4 min 30 sec total duration):\n"

@@ -17,11 +17,12 @@ According to the Student Assignment Brief, the final submission requires:
 
 | Deliverable | Required Format | Submitted File Name / Path | Status |
 | :--- | :--- | :--- | :---: |
-| **1. Individual Academic Report** | IEEE Conference Proceeding (`.docx` / `.pdf`) | `DhanBahadurGurung_17624480.pdf` / `.docx` | Ready for Generation |
+| **1. Individual Academic Report** | IEEE Conference Proceeding (`.docx` / `.pdf`) | `DhanBahadurGurung_17624480.pdf` / `.docx` | Complete |
 | **2. Source Code Package** | Compressed ZIP file containing Python code & Notebook | `DhanBahadurGurung_17624480_Code.zip` | Ready / Built |
-| **3. Execution Instructions** | Comprehensive reproduction instructions | `submission/EXECUTION_INSTRUCTIONS.md` | Complete |
-| **4. Screencast Video Demonstration** | Video recording of code running (or streaming URL) | `submission/SCREENCAST_SCRIPT.md` + Video link | Complete |
-| **5. Experimental Evidence** | Appendix documentation of experimental runs | `submission/EVIDENCE_LOGS.md` | Complete |
+| **3. Live Web Application** | Streamlit Community Cloud (Public Web GIS) | `https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/` | **Live & Operational** |
+| **4. Execution Instructions** | Comprehensive reproduction instructions | `submission/EXECUTION_INSTRUCTIONS.md` | Complete |
+| **5. Screencast Video Demonstration** | Video recording of code running (or streaming URL) | `submission/SCREENCAST_SCRIPT.md` + Video link | Complete |
+| **6. Experimental Evidence** | Appendix documentation of experimental runs | `submission/EVIDENCE_LOGS.md` | Complete |
 
 ---
 
