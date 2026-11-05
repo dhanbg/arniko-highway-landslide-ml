@@ -29,6 +29,7 @@ college/
 ├── .venv/                                      # Python virtual environment
 ├── requirements.txt                            # Pinned dependencies
 ├── README.md                                   # Comprehensive instructions & documentation
+├── app.py                                      # Interactive Streamlit Web Decision-Support Dashboard
 ├── data/
 │   ├── raw/
 │   │   ├── Arniko_Landslide_Inventory_BGS.zip  # Official BGS/NERC shapefile archive
@@ -90,7 +91,21 @@ college/
 
 ## 4. Execution Instructions
 
-### A. Run Automated Pipeline (Generates All Figures & Metrics)
+### A. Run Interactive Streamlit Web Dashboard
+To launch the interactive geospatial decision-support application in your web browser:
+```powershell
+streamlit run app.py
+```
+*(Or using the virtual environment directly: `.\.venv\Scripts\streamlit.exe run app.py`)*
+
+The dashboard provides:
+1. **🗺️ Geospatial Corridor Map:** Color-coded 114 km route risk markers with real BGS ground-truth landslide overlay.
+2. **🔮 Live Hazard Simulator:** Interactive what-if tool with sliders (slope angle, rainfall, lithology, fault proximity) generating instant ML predictions and engineering advisories.
+3. **📈 Route Elevation & Hazard Profile:** Continuous dual-axis chainage profile highlighting critical choke points (Dolalghat, Jure landslide, Barhabise, Kodari border).
+4. **📊 Model Benchmarks & Spatial Leakage:** Comparison tables, ROC curves, confusion matrices, SHAP explanations, and the +0.150 AUC spatial leakage gap quantification.
+5. **📁 Landslide Inventory & Data:** Searchable raw/processed dataset tables with CSV export and feature distributions.
+
+### B. Run Automated Pipeline (Generates All Figures & Metrics)
 To execute the end-to-end machine learning pipeline from the terminal:
 ```powershell
 python tests\run_pipeline.py
