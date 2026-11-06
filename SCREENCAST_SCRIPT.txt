@@ -49,10 +49,9 @@ Sindhupalchok district, the highway experiences severe slope failures, debris fl
 and seismic reactivation during every monsoon season, such as the catastrophic 2014 
 Jure disaster.
 
-Rather than treating this as a toy machine learning exercise, my objective is to construct 
-an auditable, safety-critical decision-support model using real ground-truth data, 
-while rigorously quantifying and resolving the pervasive issue of spatial 
-autocorrelation data leakage."
+Instead of a toy academic exercise, my goal is building a safety-first decision-support 
+model grounded in real field inventory and satellite data, while directly measuring and 
+fixing the problem of spatial data leakage."
 
 
 --------------------------------------------------------------------------------
@@ -125,8 +124,8 @@ SCENE 4: INTERACTIVE JUPYTER NOTEBOOK & SHAP EXPLANATIONS (2:15 - 3:00)
 Every cell is fully executed with analytical commentary, 95% bootstrap confidence 
 intervals, and dual-column IEEE publication figures.
 
-Crucially, we eliminated black-box opacity using game-theoretic SHAP, or SHapley Additive 
-exPlanations.
+To make sure the model isn't just an opaque black box, we used SHAP—SHapley Additive 
+exPlanations—to inspect what features drive predictions.
 
 As shown in the SHAP beeswarm summary plot, Slope Angle is the dominant physical trigger—
 with hazard escalating sharply above 35 degrees—followed by distance to active tectonic 
@@ -141,9 +140,8 @@ SCENE 5: LIVE CLOUD-DEPLOYED WEB GIS DECISION-SUPPORT APP (3:00 - 4:05)
  https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/]
 
 (SPOKEN):
-"To translate our predictive intelligence into actionable screening tools for civil engineers, 
-I deployed an interactive Web GIS dashboard live on Streamlit Community Cloud at this 
-public URL.
+"To turn these predictions into something road engineers can actually use, I built and 
+deployed an interactive Web GIS dashboard on Streamlit Community Cloud at this public link.
 
 Here on the Corridor Geospatial Map, planners can inspect the entire 114-kilometer 
 highway with color-coded susceptibility ratings, zoom into critical sectors, and toggle 
