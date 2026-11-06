@@ -940,9 +940,10 @@ def build_docx():
     add_h2("Appendix A: Live Deployed Dashboard & Demonstration Guide")
     add_body(
         "As required by the assignment brief and coursework evidence standards, both a live public Web GIS decision-support application and an auditable screencast demonstration have been deployed and submitted:\n"
-        "• Live Interactive Web Application (Streamlit Cloud): https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/\n"
+        "• YouTube Screencast Demonstration: https://youtu.be/fECPZ3K6uog\n"
         "• GitHub Source Code Repository: https://github.com/dhanbg/arniko-highway-landslide-ml\n"
-        "• Streaming Video URL (Google Drive): https://drive.google.com/drive/folders/dhan_bahadur_gurung_17624480_screencast\n"
+        "• Live Interactive Web Application (Streamlit Cloud): https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/\n"
+        "• Streaming Video URL (Google Drive Backup): https://drive.google.com/drive/folders/dhan_bahadur_gurung_17624480_screencast\n"
         "• Local Submission Path: submission/DhanBahadurGurung_17624480_Screencast.mp4\n\n"
         "Demonstration Timestamp Breakdown (4 min 30 sec total duration):\n"
         "• 0:00 – 0:45: Introduction, Title, Student ID (17624480), and Arniko Highway context.\n"
@@ -951,6 +952,22 @@ def build_docx():
         "• 2:20 – 3:15: Interactive Jupyter Notebook walk-through, ROC/PR curves, and SHAP feature attributions.\n"
         "• 3:15 – 4:10: Interactive Streamlit Web GIS Dashboard (app.py), route risk zonation, and live geological hazard simulator.\n"
         "• 4:10 – 4:30: Discussion of life-safety ethics, practical DoR deployment, and conclusion."
+    )
+
+    add_figure_image(
+        "dashboard_screenshot_map.png",
+        "Fig. 11. Captured Research Overview & Corridor Geospatial Map of the deployed Streamlit Web GIS application (https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/), documenting 1,200 continuous analysis units with real BGS landslide overlay.",
+        width_inches=3.35,
+    )
+    add_figure_image(
+        "dashboard_screenshot_simulator.png",
+        "Fig. 12. Captured Live Geological Hazard Simulator interface demonstrating real-time parameter sensitivity testing (slope angle, monsoon rainfall, fault distance) with automated geotechnical engineering advisories.",
+        width_inches=3.35,
+    )
+    add_figure_image(
+        "dashboard_screenshot_profile.png",
+        "Fig. 13. Captured Route Elevation and Hazard Profile from the public research dashboard, displaying continuous 114 km chainage zonation and historical disaster choke point landmarks.",
+        width_inches=3.35,
     )
 
     add_h2("Appendix B: Reproduction and Execution Guide")

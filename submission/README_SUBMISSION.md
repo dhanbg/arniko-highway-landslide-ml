@@ -17,12 +17,13 @@ According to the Student Assignment Brief, the final submission requires:
 
 | Deliverable | Required Format | Submitted File Name / Path | Status |
 | :--- | :--- | :--- | :---: |
-| **1. Individual Academic Report** | IEEE Conference Proceeding (`.docx` / `.pdf`) | `DhanBahadurGurung_17624480.pdf` / `.docx` | Complete |
+| **1. Individual Academic Report** | IEEE Conference Proceeding (`.docx` / `.pdf`) | `DhanBahadurGurung_17624480.pdf` / `.docx` (Includes Figs. 11–13 screenshots & video/repo links in Appendix A) | Complete |
 | **2. Source Code Package** | Compressed ZIP file containing Python code & Notebook | `DhanBahadurGurung_17624480_Code.zip` | Ready / Built |
 | **3. Live Web Application** | Streamlit Community Cloud (Public Web GIS) | `https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/` | **Live & Operational** |
-| **4. Execution Instructions** | Comprehensive reproduction instructions | `submission/EXECUTION_INSTRUCTIONS.md` | Complete |
-| **5. Screencast Video Demonstration** | Video recording of code running (or streaming URL) | `submission/SCREENCAST_SCRIPT.md` + Video link | Complete |
-| **6. Experimental Evidence** | Appendix documentation of experimental runs | `submission/EVIDENCE_LOGS.md` | Complete |
+| **4. Screencast Video Demonstration** | YouTube Streaming Video (Public/Unlisted) | `https://youtu.be/fECPZ3K6uog` | **Live & Operational** |
+| **5. GitHub Repository** | Public Source Code Repository | `https://github.com/dhanbg/arniko-highway-landslide-ml` | **Active & Up-to-Date** |
+| **6. Execution Instructions** | Comprehensive reproduction instructions | `submission/EXECUTION_INSTRUCTIONS.md` | Complete |
+| **7. Experimental Evidence** | Appendix documentation of experimental runs | `submission/EVIDENCE_LOGS.md` | Complete |
 
 ---
 
@@ -68,7 +69,7 @@ This automated script creates `submission/DhanBahadurGurung_17624480_Code.zip` c
 
 ## 4. Final Submission Checklist for Campus 4.0
 
-- [ ] Run `python scripts/create_submission_zip.py` to ensure `DhanBahadurGurung_17624480_Code.zip` is freshly built.
-- [ ] Record the 4-minute screencast using `submission/SCREENCAST_SCRIPT.md` and save the video link.
-- [ ] Compile the final IEEE report into `DhanBahadurGurung_17624480.docx` / `.pdf` including the screencast link in the appendix.
+- [x] Run `python scripts/create_submission_zip.py` to ensure `DhanBahadurGurung_17624480_Code.zip` is freshly built.
+- [x] Record the 4-minute screencast and publish video demo (`https://youtu.be/fECPZ3K6uog`).
+- [x] Compile the final IEEE report into `DhanBahadurGurung_17624480.docx` / `.pdf` including the YouTube screencast link, GitHub repo link, and dashboard screenshots (Figs. 11–13) in Appendix A.
 - [ ] Upload both `DhanBahadurGurung_17624480.pdf` and `DhanBahadurGurung_17624480_Code.zip` to Campus 4.0 before the submission deadline.

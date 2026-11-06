@@ -12,6 +12,7 @@ Target Duration:         3 to 4.5 minutes
 Deliverable Name:        DhanBahadurGurung_17624480_Screencast.mp4
 Live Deployed App URL:   https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/
 GitHub Repository:       https://github.com/dhanbg/arniko-highway-landslide-ml
+YouTube Video Link:      https://youtu.be/fECPZ3K6uog
 ================================================================================
 
 HOW TO RECORD (ZERO LOCAL SERVER SETUP):

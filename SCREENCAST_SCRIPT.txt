@@ -1,6 +1,5 @@
 ================================================================================
 ST7072CEM MACHINE LEARNING - SCREENCAST VIDEO RECORDING SCRIPT
-(DIRECT LIVE CLOUD DEMONSTRATION VERSION - NO LOCAL STREAMLIT SERVER NEEDED)
 ================================================================================
 Student Name:            Dhan Bahadur Gurung
 Coventry University ID:  17624480
@@ -8,19 +7,22 @@ Module:                  ST7072CEM / STW7072CEM Machine Learning
 Institution:             Softwarica College of IT & E-Commerce / Coventry University
 Project Title:           Machine Learning-Based Landslide Susceptibility Mapping 
                          on Nepal's Arniko Highway
-Target Duration:         3 to 4.5 minutes
+Target Duration:         3.5 to 4.5 minutes
 Deliverable Name:        DhanBahadurGurung_17624480_Screencast.mp4
 Live Deployed App URL:   https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/
 GitHub Repository:       https://github.com/dhanbg/arniko-highway-landslide-ml
+YouTube Video Link:      https://youtu.be/fECPZ3K6uog
 ================================================================================
 
-HOW TO RECORD (ZERO LOCAL SERVER SETUP):
-1. Just open your web browser with 3 pre-loaded tabs:
-   - Tab 1: Live Cloud App (https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/)
-   - Tab 2: Jupyter Notebook or GitHub Repo (https://github.com/dhanbg/arniko-highway-landslide-ml)
-   - Tab 3: Your IEEE Report PDF (DhanBahadurGurung_17624480.pdf)
-2. Open PowerShell in the background only if you want to run the quick 10-second verification script (python tests/run_pipeline.py).
-3. Press Win + Alt + R to start recording, read this script from your screen, and press Win + Alt + R to stop!
+QUICK INSTRUCTIONS BEFORE YOU START RECORDING:
+1. Windows Built-in Recorder Shortcut: Press Win + Alt + R to start and stop recording.
+2. Ensure microphone is active and clear.
+3. Pre-open tabs:
+   - Tab 1: Live Streamlit App (https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/)
+   - Tab 2: Jupyter Notebook (notebooks/Arniko_Highway_Landslide_Susceptibility.ipynb)
+   - Window 2: PowerShell open in C:\Users\Administrator\Documents\college
+4. Or launch everything in one click by running:
+   powershell -ExecutionPolicy Bypass -File scripts\start_demo.ps1
 
 ================================================================================
 VERBATIM SPOKEN SCRIPT (READ ALOUD)
@@ -29,7 +31,7 @@ VERBATIM SPOKEN SCRIPT (READ ALOUD)
 --------------------------------------------------------------------------------
 SCENE 1: INTRODUCTION & RESEARCH CONTEXT (0:00 - 0:40)
 --------------------------------------------------------------------------------
-[ACTION ON SCREEN: Show the title page of DhanBahadurGurung_17624480.pdf or GitHub README]
+[ACTION ON SCREEN: Show the title page of DhanBahadurGurung_17624480.pdf or README.md]
 
 (SPOKEN):
 "Hello. My name is Dhan Bahadur Gurung, Coventry University Student ID 17624480.
@@ -41,72 +43,79 @@ My research paper is titled: 'Machine Learning-Based Landslide Susceptibility Ma
 on Nepal's Arniko Highway: Addressing Spatial Autocorrelation Leakage and 
 Safety-Critical Decision Support.'
 
-The Arniko Highway, National Highway NH03, is a 114-kilometer vital arterial corridor 
-connecting the Kathmandu Valley with China. Traversing the steep gorges of 
-Sindhupalchok district, it suffers catastrophic landslides every monsoon season, 
-such as the deadly 2014 Jure disaster.
+The Arniko Highway, designated National Highway NH03, is a 114-kilometer critical mountain 
+corridor connecting the Kathmandu Valley with China. Traversing the steep gorges of 
+Sindhupalchok district, the highway experiences severe slope failures, debris flows, 
+and seismic reactivation during every monsoon season, such as the catastrophic 2014 
+Jure disaster.
 
 Rather than treating this as a toy machine learning exercise, my objective is to construct 
-a safety-critical, production-ready decision-support model using real ground-truth data, 
-while rigorously resolving the pervasive issue of spatial autocorrelation data leakage."
+an auditable, safety-critical decision-support model using real ground-truth data, 
+while rigorously quantifying and resolving the pervasive issue of spatial 
+autocorrelation data leakage."
 
 
 --------------------------------------------------------------------------------
 SCENE 2: REAL DATASETS & PROJECT ARCHITECTURE (0:40 - 1:15)
 --------------------------------------------------------------------------------
-[ACTION ON SCREEN: Switch to GitHub repository / VS Code showing data/raw, src/, notebooks/]
+[ACTION ON SCREEN: Switch to VS Code / File Explorer showing data/raw, src/, notebooks/]
 
 (SPOKEN):
 "Let us look at the project architecture and data inputs.
 
-As documented in our GitHub repository, this investigation is grounded in:
+Unlike synthetic toy datasets, this investigation is grounded in:
 First, 481 real mapped landslide scarps from the British Geological Survey and NERC 
-Arniko Inventory, combined with historical disaster records from the NASA Global 
+Arniko Inventory, combined with multi-temporal event records from the NASA Global 
 Landslide Catalog.
 
-Second, real 30-meter SRTM Global Digital Elevation Data across 1,200 sequential 
-100-meter corridor analysis units.
+Second, real 30-meter SRTM Global Digital Elevation Data discretized across 1,200 
+sequential 100-meter road corridor analysis units.
 
-And third, multi-source conditioning layers, including lithological rock competence, 
-distance to active thrust faults like the Main Central Thrust, and long-term 
+And third, multi-source conditioning layers, including categorical lithological rock 
+strength, distance to active thrust faults like the Main Central Thrust, and long-term 
 monsoon precipitation gradients.
 
-All source code is structured into modular Python packages inside the 'src' directory, 
+All source code is structured into modular Python components inside the 'src' directory, 
 enforcing strict separation between training fit and test transform to guarantee zero 
 leakage."
 
 
 --------------------------------------------------------------------------------
-SCENE 3: AUTOMATED PIPELINE REPRODUCIBILITY & METRICS (1:15 - 2:05)
+SCENE 3: AUTOMATED PIPELINE EXECUTION IN TERMINAL (1:15 - 2:15)
 --------------------------------------------------------------------------------
-[ACTION ON SCREEN: Show terminal output of 'python tests/run_pipeline.py' or Table IV in PDF]
+[ACTION ON SCREEN: Switch to Terminal, run: python tests/run_pipeline.py]
 
 (SPOKEN):
-"To ensure absolute scientific reproducibility, the entire pipeline is automated:
+"Now, let us execute the automated end-to-end machine learning pipeline from the terminal 
+by running 'python tests/run_pipeline.py'.
 
-We enforce a strict Spatial Holdout Protocol:
-Sectors 1 and 2, spanning the lower and middle 75 kilometers, are used for training. 
+[Press Enter in Terminal]
+
+As you can see, the script performs data synthesis and quality auditing in Step 1 and 2.
+
+Here, we enforce our Spatial Holdout Protocol:
+Sectors 1 and 2, spanning 75 kilometers from Dhulikhel to Barhabise, are used for training. 
 Sector 3, the rugged Upper Arniko canyon from Barhabise to the Kodari border, is held out 
 as an unseen spatial test bed.
 
-We evaluated three candidate classifiers: class-weighted Logistic Regression, 
+In Step 3, we evaluate three candidate classifiers: class-weighted Logistic Regression, 
 Random Forest, and XGBoost.
 
-Notice our safety-critical results: In road hazard management, a False Negative—failing 
-to identify an unstable slope that buries a vehicle—is catastrophic. 
+Notice our safety-critical metric results: In road disaster management, a False Negative—
+failing to identify an unstable slope that buries a vehicle—is catastrophic. 
 Our class-weighted Logistic Regression achieved an extraordinary 99.2% Recall, 
 detecting 123 out of 124 landslide units on the held-out corridor with only ONE single 
 False Negative!
 
-Furthermore, we empirically quantified the Spatial Autocorrelation Leakage Fallacy: 
-Standard random cross-validation yields an inflated ROC-AUC of 0.820. But under spatial 
-sector block cross-validation, performance is 0.669. This exposes an empirical 
-over-optimism gap of plus 0.150 AUC points, proving why spatial cross-validation must 
-be mandatory in geospatial machine learning."
+In Step 4, we empirically demonstrate the Spatial Autocorrelation Leakage Fallacy: 
+Standard random 3-fold cross-validation yields an artificially inflated ROC-AUC of 0.820. 
+However, spatial sector block cross-validation reveals the true spatial generalization 
+capability at 0.669. This exposes an empirical over-optimism gap of plus 0.150 AUC points, 
+demonstrating why spatial cross-validation must be mandatory in geospatial machine learning."
 
 
 --------------------------------------------------------------------------------
-SCENE 4: INTERACTIVE JUPYTER NOTEBOOK & SHAP EXPLANATIONS (2:05 - 2:50)
+SCENE 4: INTERACTIVE JUPYTER NOTEBOOK & SHAP EXPLANATIONS (2:15 - 3:00)
 --------------------------------------------------------------------------------
 [ACTION ON SCREEN: Switch to browser tab showing notebooks/Arniko_Highway_Landslide_Susceptibility.ipynb]
 
@@ -116,57 +125,58 @@ SCENE 4: INTERACTIVE JUPYTER NOTEBOOK & SHAP EXPLANATIONS (2:05 - 2:50)
 Every cell is fully executed with analytical commentary, 95% bootstrap confidence 
 intervals, and dual-column IEEE publication figures.
 
-Crucially, we eliminated black-box opacity using game-theoretic SHAP explanations.
+Crucially, we eliminated black-box opacity using game-theoretic SHAP, or SHapley Additive 
+exPlanations.
 
-As shown in our SHAP beeswarm plot, Slope Angle is the primary physical trigger—
+As shown in the SHAP beeswarm summary plot, Slope Angle is the dominant physical trigger—
 with hazard escalating sharply above 35 degrees—followed by distance to active tectonic 
 faults, monsoon rainfall, and river toe undercutting. This directly corroborates published 
 geomorphic literature by Acharya & Lee and Nepal et al."
 
 
 --------------------------------------------------------------------------------
-SCENE 5: LIVE CLOUD-DEPLOYED WEB GIS APPLICATION (2:50 - 4:00)
+SCENE 5: LIVE CLOUD-DEPLOYED WEB GIS DECISION-SUPPORT APP (3:00 - 4:05)
 --------------------------------------------------------------------------------
-[ACTION ON SCREEN: Switch to the live deployed browser tab:
+[ACTION ON SCREEN: Switch to browser tab showing:
  https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/]
 
 (SPOKEN):
-"Now, let us examine our operational product. 
-Rather than running a local prototype, I have deployed the interactive Web GIS dashboard 
-live on Streamlit Community Cloud at this public URL.
+"To translate our predictive intelligence into actionable screening tools for civil engineers, 
+I deployed an interactive Web GIS dashboard live on Streamlit Community Cloud at this 
+public URL.
 
-Here on the Corridor Geospatial Map, road planners can inspect the entire 114-kilometer 
-arterial with color-coded susceptibility ratings, zoom into high-hazard segments, 
-and inspect the historical BGS landslide overlay.
+Here on the Corridor Geospatial Map, planners can inspect the entire 114-kilometer 
+highway with color-coded susceptibility ratings, zoom into critical sectors, and toggle 
+the historical BGS landslide overlay.
 
 Under the Route Elevation Profile, we provide a continuous 114 km chainage cross-section 
 highlighting historical disaster choke points, such as the 2014 Jure landslide scar 
 and Barhabise canyon.
 
-And over here is our Live Geological Hazard Simulator: A Department of Roads engineer 
-can test hypothetical weather or excavation scenarios in real time.
+And over here is our Live Geological Hazard Simulator: A road engineer can simulate 
+upcoming monsoon downpours or cut-slope excavations in real time.
 
 [Drag the Slope Angle slider from 25 degrees to 46 degrees]
 
-Notice how the live model immediately recalculates susceptibility to High Risk, and the 
-system automatically generates actionable geotechnical advisories—such as installing 
+Watch how the predicted susceptibility immediately recalculates to High Risk, and the 
+system automatically generates site-specific geotechnical advisories—such as installing 
 rockfall drapery mesh, deep subsurface drainage, and reinforced retaining structures."
 
 
 --------------------------------------------------------------------------------
-SCENE 6: CONCLUSIONS & RUBRIC ALIGNMENT (4:00 - 4:30)
+SCENE 6: CONCLUSIONS & RUBRIC ALIGNMENT (4:05 - 4:35)
 --------------------------------------------------------------------------------
 [ACTION ON SCREEN: Switch to the final page / summary table of DhanBahadurGurung_17624480.pdf]
 
 (SPOKEN):
-"In conclusion, this project directly addresses all ST7072CEM coursework requirements:
+"In conclusion, this project directly addresses all ST7072CEM coursework rubric criteria:
 
 1. It provides empirical dataset rigor using 481 real BGS landslides across 1,200 continuous 
    road analysis units.
 2. It prioritizes human life safety, delivering 99.2% Sensitivity with class-weighted learning.
 3. It proves and quantifies the plus 0.150 AUC spatial autocorrelation leakage gap.
 4. And it delivers an open-source, reproducible codebase alongside a live deployed 
-   cloud application.
+   cloud prototype.
 
 All source files, executed notebooks, and the IEEE two-column paper are packaged inside 
 'DhanBahadurGurung_17624480_Code.zip'.
@@ -176,3 +186,4 @@ Thank you very much for your time and evaluation."
 ================================================================================
 END OF SCRIPT
 ================================================================================
+

@@ -38,3 +38,4 @@ Write-Host "--------------------------------------------------------------------
 Write-Host "`nPress any key to execute pipeline test now, or run it manually during recording..." -ForegroundColor Magenta
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 python tests\run_pipeline.py
+

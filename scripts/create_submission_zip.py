@@ -48,6 +48,7 @@ def create_submission_package():
         "outputs/reports",
         "submission/EXECUTION_INSTRUCTIONS.md",
         "submission/SCREENCAST_SCRIPT.md",
+        "submission/SCREENCAST_SCRIPT.txt",
         "submission/EVIDENCE_LOGS.md",
         "submission/README_SUBMISSION.md",
         "tests/run_pipeline.py",

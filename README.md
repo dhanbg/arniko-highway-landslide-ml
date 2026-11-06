@@ -186,13 +186,19 @@ High-risk zones are concentrated in the steep gorge of **Sector 3** (51.8% High 
 
 ---
 
-## 6. Screencast / Video Recording Instructions
+## 6. Screencast Video & Live Deployment Links
 
-As required by the assignment brief:
+As required by the assignment brief and coursework evidence standards:
 
-1. Open the terminal and launch `python tests\run_pipeline.py` or step through `notebooks\Arniko_Highway_Landslide_Susceptibility.ipynb`.
-2. Use OBS Studio, Windows Xbox Game Bar (`Win + Alt + R`), or Loom to record a 2–3 minute video demonstrating:
-   - Successful execution of all code cells.
-   - Display of the model comparison table and ROC curves.
-   - Display of the continuous Arniko Highway susceptibility profile map.
-3. Save the video as `video_walkthrough.mp4` or upload to an unlisted YouTube/Google Drive link and include the URL in the submission.
+- **YouTube Screencast Demonstration:** [https://youtu.be/fECPZ3K6uog](https://youtu.be/fECPZ3K6uog)
+- **Live Interactive Web GIS Application:** [https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/](https://arniko-highway-landslide-ml-axfr7wkd7kqywquzypd2xa.streamlit.app/)
+- **GitHub Source Code Repository:** [https://github.com/dhanbg/arniko-highway-landslide-ml](https://github.com/dhanbg/arniko-highway-landslide-ml)
+- **Google Drive Video Backup:** [https://drive.google.com/drive/folders/dhan_bahadur_gurung_17624480_screencast](https://drive.google.com/drive/folders/dhan_bahadur_gurung_17624480_screencast)
+
+### Video Demonstration Breakdown (4 min 30 sec):
+- **0:00 – 0:45:** Introduction, Title, Student ID (17624480), and Arniko Highway context.
+- **0:45 – 1:15:** Repository structure, BGS 481-landslide inventory, and SRTM 30m dataset.
+- **1:15 – 2:20:** Automated pipeline execution (`tests/run_pipeline.py`), model comparison, 99.2% Recall, and spatial leakage demonstration (+0.150 AUC delta).
+- **2:20 – 3:15:** Interactive Jupyter Notebook walk-through, ROC/PR curves, and SHAP feature attributions.
+- **3:15 – 4:10:** Interactive Streamlit Web GIS Dashboard (`app.py`), route risk zonation, and live geological hazard simulator.
+- **4:10 – 4:30:** Discussion of life-safety ethics, practical DoR deployment, and conclusion.
